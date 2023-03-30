@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWeb Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <img src="https://w7.pngwing.com/pngs/913/253/png-transparent-computer-icons-survey-methodology-flat-design-survey-miscellaneous-angle-logo.png"
+                        alt="" width="90px">
+                </div>
+                <div class="logoname">GoodVibes Survey Form
+                    <button class="btn">+Follow</button>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="Home">
+        <p>Good Vibes Form</p>
+        <div class="container">
+            <form name="myform" onsubmit="return validate();">
+                <div class="items">
+                    <h4>Tell us something positive that has happened to you today</h4>
+                    <div class="form-rows">
+                        <label>Name</label>
+                        <div class="fields"><input type="text" placeholder="Enter your name"></div>
+                    </div>
+                    <div class="form-rows"><label>Email</label>
+                        <div class="fields"><input type="email" placeholder="Enter your Email address"></div>
+                    </div>
+                    <div class="form-rows"><label>On a scale of 1-10, how good was your day?</label>
+                        <div class="fields"><input type="number" placeholder="Enter a number between 1-10" min="1"
+                                max="10"></div>
+                    </div>
+                    <div class="form-rows"><label>At what time of day did it happen</label>
+                        <div class="fields"> <select name="time">
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                            </select></div>
+                    </div>
+                    <div class="form-rows">
+                    <p for="model" id="model">Was it memorable?</p>
+                         <input type="checkbox" id="ans" value="yes"/><label for="model" id="ans1">Yes</label><br>
+                        <input type="checkbox" id="ans" value="no"/><label for="model" id="ans1">No</label><br>
+                        <input type="checkbox" id="ans" value="maybe"/><label for="model" id="ans1">Maybe</label><br>
+                       
+                    </div>
+                    <div class="form-rows"><label>Where did it happen?</label>
+                        <div class="fields"> <select name="time">
+                                <option value="At Home">At Home</option>
+                                <option value="At work">At work</option>
+                                <option value="Other">Other</option>
+                            </select></div>
+                    </div>
+                    <div class="form-rows"><label>Please describe your experience</label>
+                    <div class="fields"><textarea placeholder="Enter your Experiece here..."></textarea></div>
+                </div><br>
+                <input type="submit" >
+        </div>
+        </div>
+        </div>
+        </form>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; GoodVibes Survey Form</p>
+    </footer>
+    <script>
+
+        function validate() {
+            var x = document.myform.email.value;
+            var atposition = x.indexOf("@");
+            var dotposition = x.lastIndexOf(".");
+            
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                alert("Please enter a valid e-mail address");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
