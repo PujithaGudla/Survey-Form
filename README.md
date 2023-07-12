@@ -1,2 +1,2 @@
 # Survey-Form
-A Good Vibes survey form which has a small portion of cloning of google forms, developed using technologies like HTML, CSS & JavaScript. Email is validated using javascript.
+The Good Vibes survey form incorporates elements inspired by Google Forms, utilizing technologies such as HTML, CSS, and JavaScript. The validation of email addresses is performed through JavaScript.
